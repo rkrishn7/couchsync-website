@@ -3,15 +3,16 @@ import { Box } from 'rebass';
 import styled from 'styles/styled';
 import styles from '../styles/Home.module.css';
 
+import Images from 'assets/images';
+
 import { Nav } from 'components/nav';
 import { Landing } from 'components/landing';
+import { People } from 'components/people';
 
 const Root = styled(Box)`
   background-color: white;
-  display: flex;
-  flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export default function Home() {
@@ -19,12 +20,13 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>couchsync</title>
-        <link rel="icon" href="/couchsync/favicon.ico" />
+        <link rel="icon" href={Images.favicon} />
       </Head>
 
       <Root>
         <Nav />
         <Landing />
+        <People />
       </Root>
     </div>
   );
