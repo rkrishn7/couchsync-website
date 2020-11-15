@@ -9,12 +9,14 @@ interface LandingProps {
 }
 
 const Screenshot = styled.img`
-  width: 250px;
+  width: 100%;
   height: auto;
 
   @media(min-width: 700px) {
-    width: 650px;
+    width: 100%;
   }
+
+  margin-top: ${p => p.theme.space[3]}px;
 
   border-radius: ${p => p.theme.radii[2]}px;
   box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.75);
