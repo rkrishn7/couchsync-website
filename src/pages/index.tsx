@@ -8,6 +8,7 @@ import Images from 'assets/images';
 import { Nav } from 'components/nav';
 import { Landing } from 'components/landing';
 import { People } from 'components/people';
+import { Chat, Create, Change } from 'components/instruction';
 
 const Root = styled(Box)`
   background-color: white;
@@ -26,6 +27,9 @@ export default function Home() {
       <Root>
         <Nav />
         <Landing />
+        <Create />
+        <Chat />
+        <Change />
         <People />
       </Root>
     </div>

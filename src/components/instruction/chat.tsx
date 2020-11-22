@@ -4,13 +4,18 @@ import Link from 'next/link';
 import styled from 'styles/styled';
 import Images from 'assets/images';
 
-interface LandingProps {
-
+interface ChatProps {
+  
 }
 
-const Screenshot = styled.img`
+const Gif = styled.img`
+  width: 80%;
   height: auto;
-  width: 100%;
+
+  @media(min-width: 700px) {
+    width: 80%;
+  }
+
   margin-top: ${p => p.theme.space[3]}px;
   
   border-radius: ${p => p.theme.radii[2]}px;
@@ -21,7 +26,7 @@ const Container = styled(Flex)`
   color: white;
   width: 100vw;
   height: auto;
-  overflow: hidden;
+  overflow: visible;
 `;
 
 const Section = styled(Box)`
@@ -31,19 +36,19 @@ const Section = styled(Box)`
   flex-direction: column;
 `;
 
-export const Landing: React.FC<LandingProps> = () => {
+export const Chat: React.FC<ChatProps> = () => {
   return (
-    <Container px={5} py={5} flexWrap='wrap'>
-      <Section width={[1, 1, 1/2]} px={2}>
+    <Container py={5} flexWrap='wrap'>
+      <Section width={[1, 1, 1/2]} px={4}>
         <Heading fontSize={[ 3, 4, 5 ]} color="primary" fontWeight="600" textAlign='center'>
-          the better way to stream with friends
+          chat together
         </Heading>
         <Heading fontSize={[ 1, 2, 3 ]} color="primary" mt={1} fontWeight={200} textAlign='center'>
-          couchsync makes it easier than ever to sync videos in real time
+          send and receive messages in your party
         </Heading>
       </Section>
-      <Section width={[1, 1, 1/2]} px={2}>
-        <Screenshot src={Images.appScreenshot} />
+      <Section width={[1, 1, 1/2]} px={4}>
+        <Gif src={'https://media.giphy.com/media/dlJOXaRFWxsnCFcyDR/giphy.gif'} />
       </Section>
     </Container>
   );

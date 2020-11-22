@@ -110,7 +110,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ github, linkedin, website }) 
 
 export const People: React.FC = () => {
   return (
-    <>
+    <Container py={5} flexWrap='wrap'>
       <Heading fontSize={[ 3, 4, 5 ]} color="primary" fontWeight="600" textAlign="center">
         built by a team of student developers
       </Heading>
@@ -132,6 +132,6 @@ export const People: React.FC = () => {
           ))
         }
       </Container>
-    </>
+    </Container>
   );
 }
