@@ -1,11 +1,11 @@
-import { Box, Flex, Heading } from 'rebass';
+import { Flex, Heading } from 'rebass';
 import Link from 'next/link';
 
 import styled from 'styles/styled';
 import Images from 'assets/images';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faChrome } from '@fortawesome/free-brands-svg-icons';
 
 interface NavProps {
 
@@ -37,6 +37,8 @@ export const Social = styled.a`
   opacity: 0.7;
   color: black;
   transition: all 0.2s linear;
+  margin-left: ${p => p.theme.space[2]}px;
+  margin-right: ${p => p.theme.space[2]}px;
 
   :hover {
     opacity: 1;
@@ -59,9 +61,14 @@ export const Nav: React.FC<NavProps> = () => {
           </Link>
         </Brand>
       </Flex>
-      <Social href="https://github.com/rkrishn7/couchsync" target="_blank">
-        <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
-      </Social>
+      <Flex>
+        <Social href="https://chrome.google.com/webstore/detail/couchsync/pohhidgcfdhdbkajkafkiigbaidooece" target="_blank">
+          <FontAwesomeIcon icon={faChrome} size="2x" color="black" />
+        </Social>
+        <Social href="https://github.com/rkrishn7/couchsync" target="_blank">
+          <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
+        </Social>
+      </Flex>
     </Container>
   );
 }
