@@ -1,11 +1,10 @@
-name: ci
+name: cd
 on: 
   push:
     branches:
       - main
 jobs:
   publish:
-    name: Publish Github Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
@@ -13,4 +12,9 @@ jobs:
         with:
           node-version: '12'
       - run: yarn install --frozen-lockfile
-      - run: yarn publish:gh-pages
+      - run: rm -rf node_modules/.cache && yarn next build && yarn next export && touch out/.nojekyll
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out 
