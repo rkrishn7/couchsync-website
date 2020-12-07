@@ -4,7 +4,7 @@ import Lottie from "lottie-react-web";
 
 import styled from "styles/styled";
 import Images from "assets/images";
-import animation from "assets/data.json";
+import animation from "assets/homepage_animation.json";
 
 interface LandingProps {}
 
