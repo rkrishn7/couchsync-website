@@ -15,6 +15,8 @@ const Team = [
     avatar: 'https://avatars1.githubusercontent.com/u/41042843?s=460&u=26238ab649548a08ea1ef6efa35cebd4809455b4&v=4',
     role: 'Developer',
     social: {
+      github: 'https://github.com/RyanMatthewJacobs',
+      linkedin: 'https://www.linkedin.com/in/ryanmatthewjacobs/', 
     }
   },
   {
@@ -39,13 +41,17 @@ const Team = [
     avatar: 'https://avatars2.githubusercontent.com/u/52950000?s=460&v=4',
     role: 'Developer',
     social: {
+      linkedin: 'https://www.linkedin.com/in/sterling-nicholson',
     }
   },
   {
     name: 'Zachary Zulanas',
     role: 'Developer',
-    avatar: 'https://avatars3.githubusercontent.com/u/14898614?s=88&u=553e0703975d6daf6473366ca723d8d14ef3701d&v=4',
+    avatar: 'https://avatars2.githubusercontent.com/u/14898614?s=460&u=756f6d00300264cd1473d271e45ec3b65f101b55&v=4',
     social: {
+      github: 'https://github.com/zzulanas',
+      linkedin: 'https://www.linkedin.com/in/zzulanas',
+      website: 'https://zzulanas.com'
     }
   },
 ];
