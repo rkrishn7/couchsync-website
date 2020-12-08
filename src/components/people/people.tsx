@@ -15,6 +15,8 @@ const Team = [
     avatar: 'https://avatars1.githubusercontent.com/u/41042843?s=460&u=26238ab649548a08ea1ef6efa35cebd4809455b4&v=4',
     role: 'Developer',
     social: {
+      github: 'https://github.com/RyanMatthewJacobs',
+      linkedin: 'https://www.linkedin.com/in/ryanmatthewjacobs/', 
     }
   },
   {
