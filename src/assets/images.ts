@@ -1,6 +1,6 @@
 class Images {
   private get base() {
-    return process.env.NODE_ENV === 'production' ? '/couchsync' : '';
+    return '';
   }
 
   get logo() {
