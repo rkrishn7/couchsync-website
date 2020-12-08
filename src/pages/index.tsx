@@ -7,6 +7,7 @@ import Images from 'assets/images';
 
 import { Nav } from 'components/nav';
 import { Landing } from 'components/landing';
+import { Faq } from 'components/faq';
 import { People } from 'components/people';
 
 const Root = styled(Box)`
@@ -26,6 +27,7 @@ export default function Home() {
       <Root>
         <Nav />
         <Landing />
+        <Faq />
         <People />
       </Root>
     </div>
