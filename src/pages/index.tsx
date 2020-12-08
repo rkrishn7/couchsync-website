@@ -9,6 +9,7 @@ import { Nav } from 'components/nav';
 import { Landing } from 'components/landing';
 import { Faq } from 'components/faq';
 import { People } from 'components/people';
+import { Footer } from 'components/footer';
 
 const Root = styled(Box)`
   background-color: white;
@@ -29,6 +30,7 @@ export default function Home() {
         <Landing />
         <Faq />
         <People />
+        <Footer />
       </Root>
     </div>
   );

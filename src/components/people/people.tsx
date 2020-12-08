@@ -104,17 +104,17 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ github, linkedin, website }) 
   <Flex justifyContent="space-evenly" width="100%">
     {github && (
       <Social href={github} target="_blank">
-        <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
+        <FontAwesomeIcon icon={faGithub} size="2x" color="#282D46" />
       </Social>
     )}
     {linkedin && (
       <Social href={linkedin} target="_blank">
-        <FontAwesomeIcon icon={faLinkedin} size="2x" color="black" />
+        <FontAwesomeIcon icon={faLinkedin} size="2x" color="#282D46" />
       </Social>
     )}
     {website && (
       <Social href={website} target="_blank">
-        <FontAwesomeIcon icon={faGlobe} size="2x" color="black" />
+        <FontAwesomeIcon icon={faGlobe} size="2x" color="#282D46" />
       </Social>
     )}
   </Flex>

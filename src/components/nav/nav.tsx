@@ -6,6 +6,7 @@ import Images from 'assets/images';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faChrome } from '@fortawesome/free-brands-svg-icons';
+import { useEffect } from 'react';
 
 interface NavProps {
 
@@ -25,6 +26,10 @@ const Brand = styled(Heading)`
 const Container = styled(Flex)`
   padding: ${p => p.theme.space[2]}px;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   background-color: #282D46;
   justify-content: space-between;
   align-items: center;

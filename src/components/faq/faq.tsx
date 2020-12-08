@@ -10,7 +10,7 @@ interface LandingProps {}
 const Container = styled(Flex)`
   color: white;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #282D46;
   display: flex;
   flex-direction: column;
@@ -37,14 +37,6 @@ const CardContainer = styled(Flex)`
   flex-direction: row;
   height: 100%;
   width: 100%;
-`;
-
-const VideoContainer = styled(Flex)`
-  padding: 20px;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
 `;
 
 const IconLink = styled.a`
