@@ -39,6 +39,7 @@ const Team = [
     avatar: 'https://avatars2.githubusercontent.com/u/52950000?s=460&v=4',
     role: 'Developer',
     social: {
+      linkedin: 'https://www.linkedin.com/in/sterling-nicholson',
     }
   },
   {
