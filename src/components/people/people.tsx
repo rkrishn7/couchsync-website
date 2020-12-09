@@ -1,11 +1,9 @@
 import { Box, Flex, Heading, Card } from 'rebass';
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 import styled from 'styles/styled';
-import Images from 'assets/images';
 
 import { Social } from 'components/nav/nav';
 
@@ -79,13 +77,21 @@ const Avatar = styled.img`
   margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
-const Container = styled(Flex)`
+const MemberContainer = styled(Flex)`
   color: white;
   width: 100vw;
   min-height: 100vh;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+`;
+
+const Container = styled(Flex)`
+  padding-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282D46;
 `;
 
 interface SocialLinksProps {
@@ -98,17 +104,17 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ github, linkedin, website }) 
   <Flex justifyContent="space-evenly" width="100%">
     {github && (
       <Social href={github} target="_blank">
-        <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
+        <FontAwesomeIcon icon={faGithub} size="2x" color="#282D46" />
       </Social>
     )}
     {linkedin && (
       <Social href={linkedin} target="_blank">
-        <FontAwesomeIcon icon={faLinkedin} size="2x" color="black" />
+        <FontAwesomeIcon icon={faLinkedin} size="2x" color="#282D46" />
       </Social>
     )}
     {website && (
       <Social href={website} target="_blank">
-        <FontAwesomeIcon icon={faGlobe} size="2x" color="black" />
+        <FontAwesomeIcon icon={faGlobe} size="2x" color="#282D46" />
       </Social>
     )}
   </Flex>
@@ -116,28 +122,28 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ github, linkedin, website }) 
 
 export const People: React.FC = () => {
   return (
-    <>
-      <Heading fontSize={[ 3, 4, 5 ]} color="primary" fontWeight="600" textAlign="center">
-        built by a team of student developers
+    <Container>
+      <Heading fontSize={[ 6, 7 ]} color="white" fontWeight="600" py={5}>
+        our team
       </Heading>
-      <Container px={5} flexWrap='wrap'>
-        {
-          Team.map(member => (
-            <CardContainer width={[1, 1, 1/3]}>
-              <MemberCard m={3}>
-                <Heading fontSize={3} color="secondary" fontWeight="400">
-                  {member.name}
-                </Heading>
-                <Heading fontSize={2} color="secondary" fontWeight="600" py={2}>
-                  {member.role}
-                </Heading>
-                <Avatar src={member.avatar} />
-                <SocialLinks github={member.social.github} linkedin={member.social.linkedin} website={member.social.website} />
-              </MemberCard>
-            </CardContainer>
-          ))
-        }
-      </Container>
-    </>
+      <MemberContainer flexWrap='wrap'>
+          {
+            Team.map(member => (
+              <CardContainer width={[1, 1, 1/3]}>
+                <MemberCard m={3}>
+                  <Heading fontSize={3} color="secondary" fontWeight="600">
+                    {member.name}
+                  </Heading>
+                  <Heading fontSize={2} color="secondary" fontWeight="600" py={2}>
+                    {member.role}
+                  </Heading>
+                  <Avatar src={member.avatar} />
+                  <SocialLinks github={member.social.github} linkedin={member.social.linkedin} website={member.social.website} />
+                </MemberCard>
+              </CardContainer>
+            ))
+          }
+      </MemberContainer>
+    </Container>
   );
 }
